@@ -1,0 +1,59 @@
+{
+  "texts": {
+    "hero_kicker": "A Production Company — PH × AU",
+    "hero_l1": "We produce",
+    "hero_l2": "the shows.",
+    "hero_l3": "We build",
+    "hero_l4": "the stars.",
+    "hero_lead": "Original concerts, showcases, and festivals across the Philippines and Australia — cast, directed, and produced in-house by Zentra One Entertainment.",
+    "stat1_num": "[XX]",
+    "stat1_label": "Talents in production",
+    "stat2_num": "[XX]",
+    "stat2_label": "Original shows",
+    "stat3_num": "2",
+    "stat3_label": "Countries",
+    "stat4_num": "[XX]K",
+    "stat4_label": "Audience reached",
+    "about_head_1": "Talent deserves more than a booking.",
+    "about_head_2": "It deserves a show built around it.",
+    "about_p1": "That belief is the whole company. Zentra One Entertainment (ZOE) doesn't wait for stages to call — we build the stage, write the show, and put our talents at the center of it.",
+    "about_p2": "Operating across two markets, we bring Filipino artistry to Australian audiences and world-class production standards to Philippine stages.",
+    "crew1_role": "Founder / Director",
+    "crew1_name": "[Name]",
+    "crew1_bio": "",
+    "crew2_role": "Talent Development",
+    "crew2_name": "[Name]",
+    "crew2_bio": "",
+    "crew3_role": "Head of Production",
+    "crew3_name": "[Name]",
+    "crew3_bio": "",
+    "contact_email": "info@zentraone.com.au",
+    "contact_phone_au": "[AU number]",
+    "contact_phone_ph": "[PH number]",
+    "location_au": "Gloucester, NSW — Australia",
+    "location_ph": "Tangub City — Philippines",
+    "footer_blurb": "A production company creating original shows and producing talents across the Philippines and Australia.",
+    "footer_company": "Part of Zentra One Pty Ltd · ABN 94 698 855 784 · Gloucester, NSW"
+  },
+  "links": {
+    "facebook": "https://www.facebook.com/zentraoneentertainment",
+    "instagram": "#",
+    "tiktok": "#",
+    "email": "info@zentraone.com.au",
+    "tickets": "https://kalyxone.com",
+    "parent": "https://zentraone.com.au"
+  },
+  "talents": [
+    { "id": "t1", "name": "[Artist Name]", "category": "singer", "catLabel": "Singer", "blurb": "[REPLACE: genre, standout achievement, home city]", "photo": "", "featured": true },
+    { "id": "t3", "name": "[Group Name]", "category": "dancer", "catLabel": "Dance Crew", "blurb": "[REPLACE: style and competition credits]", "photo": "", "featured": true },
+    { "id": "t5", "name": "[Host Name]", "category": "host", "catLabel": "Host / Emcee", "blurb": "[REPLACE: languages, event types hosted]", "photo": "", "featured": true }
+  ],
+  "productions": [
+    { "id": "uplb2027", "title": "UP Los Baños Campus Concert", "kind": "Concert — Philippines", "blurb": "Sat 16 Jan 2027, 5PM · E.B. Copeland Gym, UP Los Baños. Daryl Ong, Katrina Velarde, Roland Abante, Lyca Gairanod, Bugoy Drilon, Cindy and Esay. VIP ₱3,999 · Gold ₱3,399 · Silver ₱2,699 · Bronze ₱1,999. Presented by Noble Circle Corp. (NCC) | Zentra One Entertainment.", "date": "2027-01-16", "status": "upcoming", "photo": "", "tickets": "https://kalyxone.com" },
+    { "id": "cdo2027", "title": "Daryl Ong & Katrina Velarde Concert — Cagayan de Oro", "kind": "Concert — Philippines", "blurb": "Sat 23 Jan 2027, 5PM · Limketkai Atrium, Cagayan de Oro. With Roland Abante, Lyca Gairanod, Bugoy Drilon and Cindy. VIP ₱4,899 · Gold ₱3,999 · Silver ₱3,199 · Lower Balcony ₱2,499 · Upper Balcony ₱1,999. Presented by Noble Circle Corp. (NCC) | Zentra One Entertainment.", "date": "2027-01-23", "status": "upcoming", "photo": "", "tickets": "https://kalyxone.com" },
+    { "id": "au2027-syd", "title": "Australian Tour 2027 — Sydney", "kind": "Concert — Australia", "blurb": "Fri 19 Feb 2027 · Whitlam Theatre, Revesby. Daryl Ong & Katrina Velarde with special guests Roland Abante \"Bunot\" (As seen on America's Got Talent) and Cindy. VVIP $165 · VIP $145 · GA Gold $125 · GA Silver $110. Prices exclude booking fee.", "date": "2027-02-19", "status": "upcoming", "photo": "", "tickets": "https://kalyxone.com/events/daryl-ong-and-katrina-velarde-au" },
+    { "id": "au2027-per", "title": "Australian Tour 2027 — Perth", "kind": "Concert — Australia", "blurb": "Sun 21 Feb 2027 · Swan Italian Sporting Club, Middle Swan. Daryl Ong & Katrina Velarde with special guests Roland Abante \"Bunot\" (As seen on America's Got Talent) and Cindy. VIP $145 · GA Gold $125 · GA Silver $110. Prices exclude booking fee.", "date": "2027-02-21", "status": "upcoming", "photo": "", "tickets": "https://kalyxone.com/events/daryl-ong-and-katrina-velarde-au" },
+    { "id": "au2027-mel", "title": "Australian Tour 2027 — Melbourne", "kind": "Concert — Australia", "blurb": "Fri 26 Feb 2027 · Williamstown Town Hall. Daryl Ong & Katrina Velarde with special guests Roland Abante \"Bunot\" (As seen on America's Got Talent) and Cindy. VIP $145 · GA Gold $125 · GA Silver $110. Prices exclude booking fee.", "date": "2027-02-26", "status": "upcoming", "photo": "", "tickets": "https://kalyxone.com/events/daryl-ong-and-katrina-velarde-au" },
+    { "id": "au2027-adl", "title": "Australian Tour 2027 — Adelaide", "kind": "Concert — Australia", "blurb": "Sun 28 Feb 2027 · Capri Theatre, Goodwood. Daryl Ong & Katrina Velarde with special guests Roland Abante \"Bunot\" (As seen on America's Got Talent) and Cindy. VIP $145 · GA Gold $125 · GA Reserved $110. Prices exclude booking fee.", "date": "2027-02-28", "status": "upcoming", "photo": "", "tickets": "https://kalyxone.com/events/daryl-ong-and-katrina-velarde-au" }
+  ]
+}
