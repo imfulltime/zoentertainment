@@ -1,0 +1,105 @@
+# Decap CMS configuration — Zentra One Entertainment
+# After the first Vercel deploy, set base_url to your live URL (see README).
+backend:
+  name: github
+  repo: imfulltime/zoentertainment
+  branch: main
+  base_url: https://zoentertainment.com.au   # your deployed site URL
+  auth_endpoint: /api/auth
+
+media_folder: "images/uploads"
+public_folder: "images/uploads"
+
+collections:
+  - name: "site"
+    label: "Site Content"
+    files:
+      - name: "content"
+        label: "All Site Content"
+        file: "data/content.json"
+        fields:
+          - label: "Texts"
+            name: "texts"
+            widget: "object"
+            fields:
+              - { label: "Homepage — kicker line", name: "hero_kicker", widget: "string" }
+              - { label: "Headline line 1 (outlined)", name: "hero_l1", widget: "string" }
+              - { label: "Headline line 2 (color)", name: "hero_l2", widget: "string" }
+              - { label: "Headline line 3 (outlined)", name: "hero_l3", widget: "string" }
+              - { label: "Headline line 4 (color)", name: "hero_l4", widget: "string" }
+              - { label: "Homepage — intro paragraph", name: "hero_lead", widget: "text" }
+              - { label: "Stat 1 number", name: "stat1_num", widget: "string" }
+              - { label: "Stat 1 label", name: "stat1_label", widget: "string" }
+              - { label: "Stat 2 number", name: "stat2_num", widget: "string" }
+              - { label: "Stat 2 label", name: "stat2_label", widget: "string" }
+              - { label: "Stat 3 number", name: "stat3_num", widget: "string" }
+              - { label: "Stat 3 label", name: "stat3_label", widget: "string" }
+              - { label: "Stat 4 number", name: "stat4_num", widget: "string" }
+              - { label: "Stat 4 label", name: "stat4_label", widget: "string" }
+              - { label: "About — headline part 1 (white)", name: "about_head_1", widget: "string" }
+              - { label: "About — headline part 2 (color)", name: "about_head_2", widget: "string" }
+              - { label: "About — story paragraph 1", name: "about_p1", widget: "text" }
+              - { label: "About — story paragraph 2", name: "about_p2", widget: "text" }
+              - { label: "Crew 1 role", name: "crew1_role", widget: "string" }
+              - { label: "Crew 1 name", name: "crew1_name", widget: "string" }
+              - { label: "Crew 1 bio", name: "crew1_bio", widget: "string", required: false }
+              - { label: "Crew 2 role", name: "crew2_role", widget: "string" }
+              - { label: "Crew 2 name", name: "crew2_name", widget: "string" }
+              - { label: "Crew 2 bio", name: "crew2_bio", widget: "string", required: false }
+              - { label: "Crew 3 role", name: "crew3_role", widget: "string" }
+              - { label: "Crew 3 name", name: "crew3_name", widget: "string" }
+              - { label: "Crew 3 bio", name: "crew3_bio", widget: "string", required: false }
+              - { label: "Contact — email shown on site", name: "contact_email", widget: "string" }
+              - { label: "Contact — AU phone", name: "contact_phone_au", widget: "string" }
+              - { label: "Contact — PH phone", name: "contact_phone_ph", widget: "string" }
+              - { label: "Location — Australia", name: "location_au", widget: "string" }
+              - { label: "Location — Philippines", name: "location_ph", widget: "string" }
+              - { label: "Footer — company blurb", name: "footer_blurb", widget: "text" }
+              - { label: "Footer — company line", name: "footer_company", widget: "string" }
+          - label: "Links"
+            name: "links"
+            widget: "object"
+            fields:
+              - { label: "Facebook URL", name: "facebook", widget: "string" }
+              - { label: "Instagram URL", name: "instagram", widget: "string", required: false }
+              - { label: "TikTok / YouTube URL", name: "tiktok", widget: "string", required: false }
+              - { label: "Inquiry email", name: "email", widget: "string" }
+              - { label: "Tickets URL (Kalyx One)", name: "tickets", widget: "string" }
+              - { label: "Parent company URL", name: "parent", widget: "string" }
+          - label: "Talents"
+            name: "talents"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string", hint: "Any unique code, e.g. t10" }
+              - { label: "Name", name: "name", widget: "string" }
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options:
+                  - { label: "Singer / Musician", value: "singer" }
+                  - { label: "Dancer / Performer", value: "dancer" }
+                  - { label: "Host / Emcee", value: "host" }
+                  - { label: "Comedian", value: "comedian" }
+                  - { label: "Athlete", value: "athlete" }
+                  - { label: "Influencer / Model", value: "influencer" }
+              - { label: "Label shown on card", name: "catLabel", widget: "string" }
+              - { label: "Short bio", name: "blurb", widget: "text", required: false }
+              - { label: "Photo (portrait 3:4)", name: "photo", widget: "image", required: false }
+              - { label: "Feature on homepage", name: "featured", widget: "boolean", default: false }
+          - label: "Productions"
+            name: "productions"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Type", name: "kind", widget: "string", hint: "Concert / Festival / Showcase" }
+              - { label: "Description", name: "blurb", widget: "text", required: false }
+              - { label: "Date", name: "date", widget: "string", required: false, hint: "YYYY-MM-DD" }
+              - label: "Status"
+                name: "status"
+                widget: "select"
+                options:
+                  - { label: "Upcoming", value: "upcoming" }
+                  - { label: "Past", value: "past" }
+              - { label: "Photo", name: "photo", widget: "image", required: false }
+              - { label: "Ticket link (Kalyx One)", name: "tickets", widget: "string", required: false }
