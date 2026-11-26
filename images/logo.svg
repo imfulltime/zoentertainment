@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="zoeRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5A21B"/>
+      <stop offset="45%" stop-color="#4CAF3E"/>
+      <stop offset="100%" stop-color="#1466B8"/>
+    </linearGradient>
+    <linearGradient id="zoeZ" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5A21B"/>
+      <stop offset="55%" stop-color="#1466B8"/>
+      <stop offset="100%" stop-color="#14355F"/>
+    </linearGradient>
+  </defs>
+  <!-- Ring -->
+  <circle cx="60" cy="60" r="50" fill="none" stroke="url(#zoeRing)" stroke-width="8" stroke-linecap="round" stroke-dasharray="280 34" transform="rotate(-50 60 60)"/>
+  <!-- Z letterform -->
+  <path d="M38 36 h40 a5 5 0 0 1 4 8 L50 78 h30" fill="none" stroke="url(#zoeZ)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Sprout: hand -->
+  <path d="M48 88 q14 10 28 0 q-6 12 -18 10 q-9 -2 -10 -10z" fill="#1466B8"/>
+  <!-- Sprout leaves -->
+  <path d="M62 84 q-12 -4 -12 -16 q12 2 12 16z" fill="#4CAF3E"/>
+  <path d="M64 84 q12 -4 12 -16 q-12 2 -12 16z" fill="#5CB33B"/>
+  <!-- Sun dot -->
+  <circle cx="63" cy="62" r="6" fill="#F5A21B"/>
+  <!-- Rising dots -->
+  <circle cx="92" cy="26" r="4.5" fill="#F5A21B"/>
+  <circle cx="99" cy="37" r="3.5" fill="#4CAF3E"/>
+  <circle cx="103" cy="47" r="2.5" fill="#1466B8"/>
+</svg>
