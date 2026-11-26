@@ -72,7 +72,10 @@
     var ar = document.getElementById('archiveGrid');
     if (ar && C.productions) {
       var a = C.productions.filter(function (p) { return p.status === 'past'; });
-      if (a.length) {
+      if (!a.length) {
+        var sec = ar.closest('section');
+        if (sec) sec.style.display = 'none';
+      } else {
         ar.innerHTML = a.map(function (p, i) {
           var col = ['blue', 'green', 'orange'][i % 3];
           var hasPhoto = p.photo && p.photo.length;
