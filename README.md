@@ -1,62 +1,52 @@
 # Zentra One Entertainment — zoentertainment.com.au
 
-Static site + Decap CMS admin + Vercel serverless contact form.
+Static site + Vercel serverless contact form. No build step.
 Part of Zentra One Pty Ltd · ABN 94 698 855 784 · Gloucester, NSW.
+
+Repo: https://github.com/imfulltime/zoentertainment — hosted on Vercel; every push
+to `main` redeploys the live site (~30 seconds).
 
 ## Structure
 
     index / about / talent / productions / contact .html
     css/, js/render.js          design + content renderer
     data/content.json           all editable content (texts, talents, productions)
-    images/uploads/             CMS photo uploads
-    admin/                      Decap CMS (web admin at /admin)
+    images/                     logo and site images
     api/inquiry.js              contact form → emails info@zentraone.com.au via Resend
-    api/auth.js + callback.js   GitHub login for the CMS
 
-## One-time setup
+## Editing content
 
-### 1. Push to GitHub
+All texts, talents and productions live in `data/content.json`. `js/render.js`
+loads it on every page and fills any element marked `data-cms="<key>"` with
+`texts.<key>`, and builds the talent and production grids. The text written in
+the HTML is the fallback shown if the JSON fails to load.
 
-    cd ~/Downloads/Websites/zoentertainment
-    git remote add origin https://github.com/imfulltime/zoentertainment.git
-    git push -u origin main
+Edit the JSON, commit, push to `main` — Vercel redeploys.
 
-(Create the empty repo named `zoentertainment` at github.com/new first — no README.)
+## Local preview
 
-### 2. Import to Vercel
+The pages fetch `data/content.json`, so serve the folder rather than opening the
+files directly:
 
-vercel.com → Add New → Project → import `imfulltime/zoentertainment`.
-Framework preset: **Other**. No build command. Deploy.
+    python3 -m http.server 8080
 
-### 3. Environment variables (Vercel → Project → Settings → Environment Variables)
+The contact form needs Vercel's `/api` and won't send locally (it falls back to
+opening an email).
+
+## Environment variables (Vercel → Project → Settings → Environment Variables)
 
 | Name | Value |
 |---|---|
-| `RESEND_API_KEY` | from resend.com (free account → API Keys) |
+| `RESEND_API_KEY` | from resend.com (API Keys) |
 | `INQUIRY_TO` | info@zentraone.com.au |
-| `GITHUB_CLIENT_ID` | from the OAuth app below |
-| `GITHUB_CLIENT_SECRET` | from the OAuth app below |
+| `INQUIRY_FROM` | optional, e.g. `ZOE Website <noreply@zentraone.com.au>` once the domain is verified in Resend |
 
-GitHub OAuth app: github.com → Settings → Developer settings → OAuth Apps → New.
-Homepage URL: `https://zoentertainment.com.au` — Callback URL: `https://zoentertainment.com.au/api/callback`.
+Without `INQUIRY_FROM` the form sends from Resend's `onboarding@resend.dev` test
+address, which Resend only delivers to the Resend account's own email.
 
-Optional: verify the zentraone.com.au domain in Resend and set `INQUIRY_FROM`
-to e.g. `ZOE Website <noreply@zentraone.com.au>` so emails come from your domain.
+Contact form submissions email `INQUIRY_TO` with reply-to set to the sender.
 
-### 4. Point the domain
+## Domain
 
-Vercel → Project → Settings → Domains → add `zoentertainment.com.au`, then update
-DNS at GoDaddy as Vercel instructs (A record 216.198.79.1 or CNAME for www).
-Until DNS flips, the GoDaddy site keeps serving.
-
-### 5. Check `admin/config.yml`
-
-`base_url` must be the live site URL (already set to https://zoentertainment.com.au).
-
-## Day-to-day
-
-Open **zoentertainment.com.au/admin** → log in with GitHub → edit texts, talents,
-productions, upload photos → Publish. Each publish commits to GitHub and Vercel
-redeploys automatically (~30 seconds).
-
-Contact form submissions email info@zentraone.com.au with reply-to set to the sender.
+`zoentertainment.com.au` points at Vercel (A record 216.198.79.1 at GoDaddy);
+`www` redirects to the bare domain.
