@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Talents — Zentra One Entertainment</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" href="images/logo.svg">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="brand">
+      <span class="brand-name">ZENTRA <span class="one">ONE</span><small>Entertainment</small></span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="talent.html" class="active">Talents</a>
+      <a href="productions.html">Productions</a>
+      <a href="contact.html" class="cta">Work With Us</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-banner">
+  <div class="container">
+    <h1>The talents <em>we produce</em></h1>
+    <p>Singers, dancers, hosts, comedians, athletes, and creators — developed by ZOE and featured in our productions across two countries.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:40px">
+  <div class="container">
+    <div class="filter-bar reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="singer">Singers &amp; Musicians</button>
+      <button class="filter-btn" data-filter="dancer">Dancers &amp; Performers</button>
+      <button class="filter-btn" data-filter="host">Hosts &amp; Emcees</button>
+      <button class="filter-btn" data-filter="comedian">Comedians</button>
+      <button class="filter-btn" data-filter="athlete">Athletes</button>
+      <button class="filter-btn" data-filter="influencer">Influencers &amp; Models</button>
+    </div>
+
+    <div class="grid cols-3" id="talentGrid">
+      <div class="talent-card reveal" data-cat="singer">
+        <div class="tint-blue"></div>
+        <div class="backdrop">01</div>
+        <div class="info">
+          <span class="cat cat-blue">Singer</span>
+          <h3>[Artist Name]</h3>
+          <p>[REPLACE: genre, standout achievement, home city]</p>
+        </div>
+      </div>
+      <div class="talent-card reveal" data-cat="singer">
+        <div class="tint-blue"></div>
+        <div class="backdrop">02</div>
+        <div class="info">
+          <span class="cat cat-blue">Band</span>
+          <h3>[Band Name]</h3>
+          <p>[REPLACE: style, notable gigs, PH/AU availability]</p>
+        </div>
+      </div>
+      <div class="talent-card reveal" data-cat="dancer">
+        <div class="tint-green"></div>
+        <div class="backdrop">03</div>
+        <div class="info">
+          <span class="cat cat-green">Dance Crew</span>
+          <h3>[Group Name]</h3>
+          <p>[REPLACE: style and competition credits]</p>
+        </div>
+      </div>
+      <div class="talent-card reveal" data-cat="dancer">
+        <div class="tint-green"></div>
+        <div class="backdrop">04</div>
+        <div class="info">
+          <span class="cat cat-green">Performer</span>
+          <h3>[Performer Name]</h3>
+          <p>[REPLACE: specialty act — fire dance, cultural showcase]</p>
+        </div>
+      </div>
+      <div class="talent-card reveal" data-cat="host">
+        <div class="tint-orange"></div>
+        <div class="backdrop">05</div>
+        <div class="info">
+          <span class="cat cat-orange">Host / Emcee</span>
+          <h3>[Host Name]</h3>
+          <p>[REPLACE: languages, event types hosted]</p>
+        </div>
+      </div>
+      <div class="talent-card reveal" data-cat="comedian">
+        <div class="tint-orange"></div>
+        <div class="backdrop">06</div>
+        <div class="info">
+          <span class="cat cat-orange">Comedian</span>
+          <h3>[Comedian Name]</h3>
+          <p>[REPLACE: comedy style, notable shows]</p>
+        </div>
+      </div>
+      <div class="talent-card reveal" data-cat="athlete">
+        <div class="tint-blue"></div>
+        <div class="backdrop">07</div>
+        <div class="info">
+          <span class="cat cat-blue">Athlete</span>
+          <h3>[Athlete Name]</h3>
+          <p>[REPLACE: sport, titles, appearances]</p>
+        </div>
+      </div>
+      <div class="talent-card reveal" data-cat="influencer">
+        <div class="tint-green"></div>
+        <div class="backdrop">08</div>
+        <div class="info">
+          <span class="cat cat-green">Influencer</span>
+          <h3>[Creator Name]</h3>
+          <p>[REPLACE: platform, following, niche]</p>
+        </div>
+      </div>
+      <div class="talent-card reveal" data-cat="influencer">
+        <div class="tint-orange"></div>
+        <div class="backdrop">09</div>
+        <div class="info">
+          <span class="cat cat-orange">Model</span>
+          <h3>[Model Name]</h3>
+          <p>[REPLACE: runway, commercial, ambassador work]</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-stage">
+  <div class="container reveal">
+    <h2>Think you belong<br><em>on a ZOE stage?</em></h2>
+    <p>We're always scouting for the next production — in the Philippines and in Australia.</p>
+    <a href="contact.html" class="btn btn-fill">Audition for ZOE</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <span class="brand-name">ZENTRA <span class="one">ONE</span><small>Entertainment</small></span>
+        </div>
+        <p data-cms="footer_blurb">A production company creating original shows and producing talents across the Philippines and Australia.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="about.html">About</a>
+        <a href="talent.html">Our Talents</a>
+        <a href="productions.html">Productions</a>
+        <a href="contact.html">Contact &amp; Inquiries</a>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <a href="https://www.facebook.com/zentraoneentertainment" data-cms-href="facebook" target="_blank" rel="noopener">Facebook</a>
+        <a href="#" data-cms-href="instagram">Instagram</a>
+        <a href="#" data-cms-href="tiktok">TikTok / YouTube</a>
+        <a href="https://kalyxone.com" data-cms-href="tickets" target="_blank" rel="noopener">Buy Tickets — Kalyx One</a>
+        <a href="mailto:info@zentraone.com.au" data-cms-href="email" data-cms="contact_email">info@zentraone.com.au</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Zentra One Entertainment · <a href="https://zentraone.com.au" data-cms-href="parent" style="display:inline;margin:0" target="_blank" rel="noopener">Zentra One Pty Ltd</a> · ABN 94 698 855 784 · Gloucester, NSW</span>
+      <span>Promoting Talent · Creating Experiences · Connecting Communities</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/render.js"></script>
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && e.target.classList.add('in')), { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
